@@ -26,6 +26,13 @@ public class SuperLinkedList extends LinkedList<String> {
 
     public String toString() {
 
-        return "";
+        String finalString = "";
+        Iterator<String> iter  = this.iterator();
+
+        while (iter.hasNext())
+        {
+            finalString += (iter.next() + ", ");
+        }
+        return finalString;
     }
 } // end SuperLinkedList
