@@ -33,6 +33,34 @@ public class SuperLinkedList extends LinkedList<String> {
     }
 
     public LinkedList<String> removeDuplicates() {
+        LinkedList<String> duplicateList = new LinkedList<String>();
+        Iterator <String> outerIterator = this.iterator();
+        outerPosition = 0
+
+
+        While outer iterator has next
+        Current = outer iterator next
+
+
+        Create inner iterator for original list
+        For (int i = 0; i < outerPosition; i++)
+            Inner iterator.next
+
+
+        While inner iterator has next
+        Compare = inner iterator next
+        If current equals compare
+            Add compare to duplicate list
+            Inner iterator.remove()
+
+
+        Outerposition++
+        Reset outer iterator 
+        For (int i = 0; i < outerPosition; i++)
+            Outer iterator.next
+
+
+        Return duplicate list
         return null;
     }
 
