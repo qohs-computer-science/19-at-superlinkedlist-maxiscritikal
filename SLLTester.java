@@ -23,6 +23,22 @@ class SLLTester {
     myList2.add("E");
     myList2.removeConsonants();
     System.out.println(myList2.toString());
+
+    SuperLinkedList myList3 = new SuperLinkedList();
+    myList3.add("A");
+    myList3.add("B");
+    myList3.add("A");
+    myList3.add("C");
+    myList3.add("B");
+    myList3.add("D");
+    myList3.add("C");
+    myList3.add("Z");
+    myList3.add("E");
+    myList3.add("E");
+    System.out.println(myList3.toString());
+    LinkedList<String> duplicates = myList3.removeDuplicates();
+    System.out.println("List after removing duplicates: " + myList3.toString());
+    System.out.println("List of duplicates removed: " + duplicates.toString());
     
   } // end main
 } // end class
