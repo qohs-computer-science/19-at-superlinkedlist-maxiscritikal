@@ -2,43 +2,86 @@ import java.util.LinkedList;
 
 class SLLTester {
   public static void main(String[] args) {
-    SuperLinkedList myList = new SuperLinkedList();
-    myList.add("A");
-    myList.add("B");
-    myList.add("C");
-    myList.add("D");
-    myList.add("E");
-    myList.add("I");
-    myList.add("O");
-    myList.add("U");
-    System.out.println(myList.toString());
-    myList.removeVowels();
-    System.out.println(myList.toString());
+    SuperLinkedList removeVowelsTester = new SuperLinkedList();
+    removeVowelsTester.add("A");
+    removeVowelsTester.add("B");
+    removeVowelsTester.add("A");
+    removeVowelsTester.add("C");
+    removeVowelsTester.add("D");
+    removeVowelsTester.add("E");
+    removeVowelsTester.add("I");
+    removeVowelsTester.add("O");
+    removeVowelsTester.add("U");
+    removeVowelsTester.add("B");
+    removeVowelsTester.add("Z");
+    System.out.println("\nOriginal List: " + removeVowelsTester);
+    removeVowelsTester.removeVowels();
+    System.out.println("\nAfter removing vowels: " + removeVowelsTester);
 
-    SuperLinkedList myList2 = new SuperLinkedList();
-    myList2.add("A");
-    myList2.add("B");
-    myList2.add("C");
-    myList2.add("D");
-    myList2.add("E");
-    myList2.removeConsonants();
-    System.out.println(myList2.toString());
+    SuperLinkedList removeConsonantsTester = new SuperLinkedList();
+    removeConsonantsTester.add("A");
+    removeConsonantsTester.add("B");
+    removeConsonantsTester.add("A");
+    removeConsonantsTester.add("C");
+    removeConsonantsTester.add("D");
+    removeConsonantsTester.add("E");
+    removeConsonantsTester.add("I");
+    removeConsonantsTester.add("O");
+    removeConsonantsTester.add("U");
+    removeConsonantsTester.add("B");
+    removeConsonantsTester.add("Z");
+    System.out.println("\nOriginal List: " + removeConsonantsTester);
+    removeConsonantsTester.removeConsonants();
+    System.out.println("\nAfter removing consonants: " + removeConsonantsTester);
 
-    SuperLinkedList myList3 = new SuperLinkedList();
-    myList3.add("A");
-    myList3.add("B");
-    myList3.add("A");
-    myList3.add("C");
-    myList3.add("B");
-    myList3.add("D");
-    myList3.add("C");
-    myList3.add("Z");
-    myList3.add("E");
-    myList3.add("E");
-    System.out.println(myList3.toString());
-    LinkedList<String> duplicates = myList3.removeDuplicates();
-    System.out.println("List after removing duplicates: " + myList3.toString());
-    System.out.println("List of duplicates removed: " + duplicates.toString());
-    
+    SuperLinkedList removeDuplicatesTester = new SuperLinkedList();
+    removeDuplicatesTester.add("A");
+    removeDuplicatesTester.add("B");
+    removeDuplicatesTester.add("A");
+    removeDuplicatesTester.add("C");
+    removeDuplicatesTester.add("D");
+    removeDuplicatesTester.add("E");
+    removeDuplicatesTester.add("I");
+    removeDuplicatesTester.add("O");
+    removeDuplicatesTester.add("U");
+    removeDuplicatesTester.add("B");
+    removeDuplicatesTester.add("Z");
+    removeDuplicatesTester.add("Z");
+    removeDuplicatesTester.add("Z");
+    removeDuplicatesTester.add("Y");
+    removeDuplicatesTester.add("Z");
+    System.out.println("\nOriginal List: " + removeDuplicatesTester);
+    System.out.println("\nDuplicates to be removed: " + removeDuplicatesTester.removeDuplicates());
+    System.out.println("\nAfter removing duplicates: " + removeDuplicatesTester);
+
+    SuperLinkedList concatenateStringsTester = new SuperLinkedList();
+    concatenateStringsTester.add("A");
+    concatenateStringsTester.add("B");
+    concatenateStringsTester.add("C");
+    concatenateStringsTester.add("A");
+    concatenateStringsTester.add("D");
+    concatenateStringsTester.add("E");
+    System.out.println("\nOriginal List: " + concatenateStringsTester);
+    System.out.println("\nAfter concatenating strings: " + concatenateStringsTester.concatenateStrings());
+
+    SuperLinkedList mixTester = new SuperLinkedList();
+    mixTester.add("A");
+    mixTester.add("B");
+    mixTester.add("C");
+    mixTester.add("D");
+    mixTester.add("E");
+    mixTester.add("F");
+    System.out.println("\nOriginal List 1: " + mixTester);
+    SuperLinkedList mixTester2 = new SuperLinkedList();
+    mixTester2.add("a");
+    mixTester2.add("b");
+    mixTester2.add("c");
+    mixTester2.add("d");
+    mixTester2.add("e");
+    mixTester2.add("f");
+    System.out.println("\nOriginal List 2: " + mixTester2);
+    System.out.println("\nAfter mixing the two lists: " +  mixTester.mix(mixTester2));
+
+
   } // end main
 } // end class

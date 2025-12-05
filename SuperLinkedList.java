@@ -74,16 +74,14 @@ public class SuperLinkedList extends LinkedList<String> {
 
     public LinkedList<String> mix(LinkedList<String> list2) {
 
-        LinkedList<String> secondList = list2;
         LinkedList<String> finalList = new LinkedList<String>();
         Iterator <String> iterList1 = this.iterator();
         Iterator <String> iterList2 = list2.iterator();
-
-
-        while (list1 iterator and list 2 iterator has a next)
+        
+        while (iterList1.hasNext())
         {
-            finalList += list1.next
-            finalList += list2.next
+            finalList.add(iterList1.next());
+            finalList.add(iterList2.next());
         }
 
         return finalList;
