@@ -34,31 +34,59 @@ public class SuperLinkedList extends LinkedList<String> {
 
     public LinkedList<String> removeDuplicates() {
         LinkedList<String> duplicateList = new LinkedList<String>();
-        for (int i = 0; i < this.size(); i++)
-        {
-            String current = this.get(i);
-            for (int j = i + 1; j < this.size(); j++)
+
+            for (int i = 0; i < this.size(); i++)
             {
-                String compare = this.get(j);
-                if (current.equals(compare))
+                String current = this.get(i);
+                Iterator <String> iter = this.iterator();
+                for (int y = 0; iter.hasNext() && y < i + 1; y++)
                 {
-                    duplicateList.add(compare);
-                    this.remove(j);
-                    j--; // adjust index after removal
+                    iter.next();
+                }
+                while (iter.hasNext())
+                {
+                    String compare = iter.next();
+                    if (current.equals(compare))
+                    {
+                        duplicateList.add(compare);
+                        iter.remove();
+                    }
                 }
             }
-        }
-        return duplicateList;
+            return duplicateList;
     }
 
     public LinkedList<String> concatenateStrings() {
 
-        return null;
+        LinkedList<String> concatenatedList = new LinkedList<String>();
+        Iterator <String> iter = this.iterator();
+        String concatenatedString = "";
+
+        while (iter.hasNext())
+        {
+            concatenatedString += iter.next();
+        }
+
+        concatenatedList.add(concatenatedString);
+
+        return concatenatedList;
     }
 
     public LinkedList<String> mix(LinkedList<String> list2) {
 
-        return null;
+        LinkedList<String> secondList = list2;
+        LinkedList<String> finalList = new LinkedList<String>();
+        Iterator <String> iterList1 = this.iterator();
+        Iterator <String> iterList2 = list2.iterator();
+
+
+        while (list1 iterator and list 2 iterator has a next)
+        {
+            finalList += list1.next
+            finalList += list2.next
+        }
+
+        return finalList;
     }
 
     public String toString() {
