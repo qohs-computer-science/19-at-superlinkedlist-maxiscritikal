@@ -65,9 +65,8 @@ public class SuperLinkedList extends LinkedList<String> {
         while (iter.hasNext())
         {
             concatenatedString += iter.next();
+            concatenatedList.add(concatenatedString);
         }
-
-        concatenatedList.add(concatenatedString);
 
         return concatenatedList;
     }
