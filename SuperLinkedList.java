@@ -1,3 +1,5 @@
+//Max Korsa, SuperLinkedList.java, 12/5/25, PD:4
+//This class extends LinkedList to add extra cool methods for manipulating lists made of strings
 import java.util.LinkedList;
 import java.util.Iterator;
 
@@ -12,10 +14,10 @@ public class SuperLinkedList extends LinkedList<String> {
             {
                 iter.remove();
                 remove = true;
-            }
-        }
+            }//end if
+        }//end while loop
         return remove;
-    }
+    }//end removeVowels
 
     public boolean removeConsonants() {
         boolean remove = false;
@@ -27,10 +29,10 @@ public class SuperLinkedList extends LinkedList<String> {
             {
                 iter.remove();
                 remove = true;
-            }
-        }
+            }//end if
+        }//end while loop
         return remove;
-    }
+    }//end removeConsonants
 
     public LinkedList<String> removeDuplicates() {
         LinkedList<String> duplicateList = new LinkedList<String>();
@@ -42,7 +44,7 @@ public class SuperLinkedList extends LinkedList<String> {
                 for (int y = 0; iter.hasNext() && y < i + 1; y++)
                 {
                     iter.next();
-                }
+                }//end for loop to skip to current position
                 while (iter.hasNext())
                 {
                     String compare = iter.next();
@@ -50,11 +52,11 @@ public class SuperLinkedList extends LinkedList<String> {
                     {
                         duplicateList.add(compare);
                         iter.remove();
-                    }
-                }
-            }
+                    }//end if
+                }//end while loop
+            }//end for loop
             return duplicateList;
-    }
+    }//end removeDuplicates
 
     public LinkedList<String> concatenateStrings() {
 
@@ -66,10 +68,10 @@ public class SuperLinkedList extends LinkedList<String> {
         {
             concatenatedString += iter.next();
             concatenatedList.add(concatenatedString);
-        }
+        }//end while loop
 
         return concatenatedList;
-    }
+    }//end concatenateStrings
 
     public LinkedList<String> mix(LinkedList<String> list2) {
 
@@ -81,10 +83,10 @@ public class SuperLinkedList extends LinkedList<String> {
         {
             finalList.add(iterList1.next());
             finalList.add(iterList2.next());
-        }
+        }//end while loop
 
         return finalList;
-    }
+    }//end mix
 
     public String toString() {
 
@@ -96,5 +98,5 @@ public class SuperLinkedList extends LinkedList<String> {
             finalString += (iter.next() + ", ");
         }
         return finalString;
-    }
+    }//end toString
 } // end SuperLinkedList

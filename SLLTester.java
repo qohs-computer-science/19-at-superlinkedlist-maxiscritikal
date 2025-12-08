@@ -1,3 +1,5 @@
+//Max Korsa, SLLTester.java, 12/5/25, PD:4
+//This class serves to test the methods in SuperLinkedList.java
 import java.util.LinkedList;
 import java.util.Iterator;
 
@@ -52,8 +54,14 @@ class SLLTester {
     removeDuplicatesTester.add("Y");
     removeDuplicatesTester.add("Z");
     System.out.println("\nOriginal List: " + removeDuplicatesTester);
-    System.out.println("\nDuplicates to be removed: " + removeDuplicatesTester.removeDuplicates());
+    LinkedList<String> duplicatesList = removeDuplicatesTester.removeDuplicates();
+    System.out.println("\nDuplicates to be removed: ");
+    Iterator<String> dupIter = duplicatesList.iterator();
+    while (dupIter.hasNext()) {
+        System.out.println(dupIter.next());
+    }//end while loop
     System.out.println("\nAfter removing duplicates: " + removeDuplicatesTester);
+    
 
     SuperLinkedList concatenateStringsTester = new SuperLinkedList();
     concatenateStringsTester.add("A");
@@ -63,7 +71,13 @@ class SLLTester {
     concatenateStringsTester.add("D");
     concatenateStringsTester.add("E");
     System.out.println("\nOriginal List: " + concatenateStringsTester);
-    System.out.println("\nAfter concatenating strings: " + concatenateStringsTester.concatenateStrings());
+    LinkedList<String> concatenatedList = concatenateStringsTester.concatenateStrings();
+    System.out.println("\nAfter concatenating strings: ");
+    Iterator<String> concatIter = concatenatedList.iterator();
+    while (concatIter.hasNext()) {
+        System.out.println(concatIter.next());
+    }//end while loop
+
 
     SuperLinkedList mixTester = new SuperLinkedList();
     mixTester.add("A");
@@ -73,6 +87,7 @@ class SLLTester {
     mixTester.add("E");
     mixTester.add("F");
     System.out.println("\nOriginal List 1: " + mixTester);
+
     SuperLinkedList mixTester2 = new SuperLinkedList();
     mixTester2.add("a");
     mixTester2.add("b");
@@ -81,8 +96,12 @@ class SLLTester {
     mixTester2.add("e");
     mixTester2.add("f");
     System.out.println("\nOriginal List 2: " + mixTester2);
-    System.out.println("\nAfter mixing the two lists: " +  mixTester.mix(mixTester2));
-
-
+    
+    LinkedList<String> mixedList = mixTester.mix(mixTester2);
+    System.out.println("\nAfter mixing the two lists: ");
+    Iterator<String> mixIter = mixedList.iterator();
+    while (mixIter.hasNext()) {
+        System.out.println(mixIter.next());
+    }//end while loop
   } // end main
 } // end class
